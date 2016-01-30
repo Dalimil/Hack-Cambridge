@@ -1,7 +1,8 @@
 # Hack-Cambridge
 Hack Cambridge hackathon
 
-
+Server in /Server
+Android app in /Android-app
 
 ## Server installation
 
