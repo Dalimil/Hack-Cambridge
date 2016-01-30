@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %} {# a comment ... any block can be omitted #}
+  <!-- {{ super() }} can be used to insert contents of a nonempty block (not relevant here) -->
+  <style type="text/css">
+    .navigation { color: #336699; }
+  </style>
+{% endblock %}
+
+{% block content %}
+<body class="container">
+	
+	
+	Inside templates you have access to the request, session and g objects as well as get_flashed_messages()
+
+	{% if name %}
+		<h1>Hello {{ name }}!</h1>
+	{% else %}
+		<h1>Hello World!</h1>
+	{% endif %}
+
+	<ul id="navigation">
+	{% for item in navigation %}
+	    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+	{%- endfor %} {# the - before endfor strips whitespace #}
+	</ul> 
+
+</body>
+{% endblock %}
+
+    
