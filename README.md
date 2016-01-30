@@ -1,10 +1,18 @@
 # Hack-Cambridge
 Hack Cambridge hackathon
 
+TODO 
+
+**Description:**  TODO
+
+**Team:** [Dalimil Hajek](https://github.com/dalimil), [Miguel Jaques](https://github.com/seuqaj114), Andre Melo, Nicholas Boucher
+
+## Set up
+
 Server in /Server
 Android app in /Android-app
 
-## Server installation
+### Server installation
 
 #### Install required packages
 ```sh
