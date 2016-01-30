@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = "bnNoqxXSgzfdajkdsafadsoXSZjb8mrMp5L0L4mJ4o8nRzn"
 
 def hash(data):
-	return hashlib.sha256(str(data)+"l4%$@2j43").hexdigest()
+	return hashlib.sha256(str(data)+"salt2j4Eo").hexdigest()
 
 def hash_strong(data):
 	h = data
