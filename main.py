@@ -4,6 +4,10 @@ from flask import render_template, request, redirect, session, url_for, escape, 
 app = Flask(__name__)
 app.secret_key = "bnNoqxXSgzoXSZjb8mrMp5L0L4mJ4o8nRzn"
 
+@app.route('/')
+def index():
+	return render_template('index.html')
+	
 @app.route('/authenticate')
 def authenticate():
 	return "authenticate here"
