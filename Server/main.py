@@ -3,6 +3,7 @@ from flask import render_template, request, redirect, session, url_for, escape, 
 import hashlib
 from models import User
 import time
+import json
 
 app = Flask(__name__)
 app.secret_key = "bnNoqxXSgzfdajkdsafadsoXSZjb8mrMp5L0L4mJ4o8nRzn"
@@ -49,17 +50,18 @@ def authenticate():
 
 	matches = User.query(User.timed_hash==h).fetch()
 	if(len(matches) > 0):
-		return str(matches[0].key.pairs()[0][1])
+		return json.dumps({"username":matches[0].username, "id":str(matches[0].key.pairs()[0][1])})
 	else:
 		return abort(401)
 
 @app.route('/register', methods=['POST'])
 def register():
 	h = hash_strong(request.form['hash'])
-	if(h is None):
+	username = request.form['username']
+	if(h is None or username is None):
 		abort(400)
-
-	u = User(original_hash=h)
+	print(username)
+	u = User(username=username, original_hash=h)
 	u.put()
 	update_db()
 	return "OK"
