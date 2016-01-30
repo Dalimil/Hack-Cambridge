@@ -53,19 +53,16 @@ def authenticate():
 	else:
 		return abort(401)
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/register', methods=['POST'])
 def register():
-	if(request.method == 'POST'):
-		h = hash_strong(request.form['hash'])
-		if(h is None):
-			abort(400)
+	h = hash_strong(request.form['hash'])
+	if(h is None):
+		abort(400)
 
-		u = User(original_hash=h)
-		u.put()
-		update_db()
-		return "OK"
-
-	return render_template('register.html')
+	u = User(original_hash=h)
+	u.put()
+	update_db()
+	return "OK"
 
 @app.route('/error')
 def error():

@@ -1,37 +1,166 @@
-{% extends "layout.html" %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hack Cambridge 2016</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+<body>
 
-{% block title %}Index{% endblock %}
-{% block head %} {# a comment ... any block can be omitted #}
-  <!-- {{ super() }} can be used to insert contents of a nonempty block (not relevant here) -->
-  <style type="text/css">
-    .navigation { color: #336699; }
-  </style>
-{% endblock %}
+	<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<div style="margin-top:-5em;margin-bottom:2em;"><span text-align="center"><img width="70%" src="static/img/logo.png"></span></div>
+					<br>
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">QuickStart</a></li>
+							<li><a href="#two">How it works</a></li>
+							<li><a href="#three">Get in touch</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 
-{% block content %}
-<body class="container">
-	<br>
-	<button type="button" class="btn btn-primary btn-lg">AUTHENTICATE</button>
-	<br>
-	<br>
-	<button type="button" class="btn">Register</button>
-	<br> 
+	<!-- Wrapper -->
+			<div id="wrapper">
 
-	Inside templates you have access to the request, session and g objects as well as get_flashed_messages()
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Clear Pass</h1>
+							<p>We provide the best security for your online logins.<br>
+							Start using it now.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Start here</a></li>
+							</ul>
+						</div>
+					</section>
 
-	{% if name %}
-		<h1>Hello {{ name }}!</h1>
-	{% else %}
-		<h1>Hello World!</h1>
-	{% endif %}
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<div class="content">
+								<div class="inner">
+									<h2>Authenticate</h2>
+									<p>After clicking the button you will have 5 minutes to complete the authentication process on your device.</p>
+									<ul class="actions">
+										<li><a href="#" class="button">Authenticate</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="content">
+								<div class="inner">
+									<h2>Register</h2>
+									<p>Follow the instructions on your device.</p>
+									<ul class="actions">
+										<li><a href="#" class="button">Register</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
 
-	<ul id="navigation">
-	{% for item in navigation %}
-	    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-	{%- endfor %} {# the - before endfor strips whitespace #}
-	</ul> 
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>How it works</h2>
+							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>Lorem ipsum amet</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-lock"></span>
+									<h3>Aliquam sed nullam</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>Sed erat ullam corper</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-desktop"></span>
+									<h3>Veroeros quis lorem</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-chain"></span>
+									<h3>Urna quis bibendum</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-diamond"></span>
+									<h3>Aliquam urna dapibus</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="field half first">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="5"></textarea>
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Send Message</a></li>
+										</ul>
+									</form>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<span>12345 Somewhere Road #654<br />
+											Nashville, TN 00000-0000<br />
+											USA</span>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Hack Cambridge 2016</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
 
 </body>
-{% endblock %}
 
     
