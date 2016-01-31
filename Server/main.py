@@ -36,14 +36,8 @@ def update_db():
 def index():
 	return render_template('index.html')
 
-@app.route('/authenticate', methods=['GET', 'POST'])
+@app.route('/authenticate', methods=['POST'])
 def authenticate():
-	if(request.method == 'GET'):
-		update_db() # todo: remove?
-		flash("Authentication started - you've got 5 minutes")
-		return redirect(url_for('index'))
-
-	# POST
 	h = request.form['hash']
 	if(h is None):
 		abort(400)
@@ -65,6 +59,11 @@ def register():
 	u.put()
 	update_db()
 	return "OK"
+
+@app.route('/refresh')
+def refresh():
+	update_db()
+	return redirect(url_for('index'))
 
 @app.route('/error')
 def error():
