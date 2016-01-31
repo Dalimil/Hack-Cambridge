@@ -19,7 +19,7 @@ def hash_strong(data):
 
 def update_db():
 	users = User.query().fetch()
-	t = str(time.time()//300) # 5 min
+	t = str(int(time.time()//300)) # 5 min
 
 	if(len(users) == 0):
 		return
