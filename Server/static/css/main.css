@@ -3012,7 +3012,7 @@
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
-		min-height: 22.5em;
+		min-height: 10em;
 	}
 
 		body.is-ie .spotlights > section {
@@ -3059,10 +3059,10 @@
 			-webkit-flex-direction: column;
 			-ms-flex-direction: column;
 			flex-direction: column;
-			-moz-justify-content: center;
+			/*-moz-justify-content: center;
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
-			justify-content: center;
+			justify-content: center;*/
 			width: 50em;
 			-ms-flex: 1;
 		}
