@@ -39,7 +39,7 @@ def index():
 @app.route('/authenticate', methods=['GET', 'POST'])
 def authenticate():
 	if(request.method == 'GET'):
-		update_db()
+		update_db() # todo: remove?
 		flash("Authentication started - you've got 5 minutes")
 		return redirect(url_for('index'))
 
@@ -76,6 +76,11 @@ def debug():
 	for i in User.query().fetch():
 		s += str(i) + "<br><br>\n"
 	return s
+
+@app.after_request
+def after_request(response):
+	response.headers.add('Access-Control-Allow-Origin', '*')
+	return response
 
 if __name__ == '__main__':
 	#host='0.0.0.0' only with debug disabled
