@@ -58,7 +58,7 @@ def authenticate():
 def register():
 	h = hash_strong(request.form['hash'])
 	username = request.form['username']
-	if(h is None or username is None):
+	if(h is None):
 		abort(400)
 	print(username)
 	u = User(username=username, original_hash=h)
