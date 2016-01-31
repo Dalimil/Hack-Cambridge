@@ -1,6 +1,8 @@
 # Hack-Cambridge
 Hack Cambridge hackathon
 
+Demo (likely dead soon - check screenshots): http://hackcambridge-3368.appspot.com/
+
 TODO 
 
 **Description:**  TODO
