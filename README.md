@@ -1,13 +1,13 @@
 # Hack-Cambridge
-Hack Cambridge hackathon
+Hack Cambridge hackathon - Product called 'Clear Pass'
 
-Demo (likely dead soon - check screenshots): http://hackcambridge-3368.appspot.com/
+Demo-our-company: https://hackcambridge-3368.appspot.com/
 
-TODO 
+Demo-client-company: https://hackcambridge-3231.appspot.com/
 
 **Description:**  TODO
 
-**Team:** [Dalimil Hajek](https://github.com/dalimil), [Miguel Jaques](https://github.com/seuqaj114), Andre Melo, Nicholas Boucher
+**Team:** [Dalimil Hajek](https://github.com/dalimil), [Miguel Jaques](https://github.com/seuqaj114), [Andre Melo](https://github.com/andrenmelo), [Nicholas Boucher](https://github.com/nickboucher32)
 
 ## Structure
 
@@ -15,7 +15,7 @@ Server in /Server
 
 Android app in /Android-app
 
-Client-Company-Website-Demo in /demo
+Client-Company-Website-Demo in /Demo-company
 
 Google App Engine files included for convenience
 
