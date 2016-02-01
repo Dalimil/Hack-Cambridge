@@ -1,13 +1,16 @@
-# Hack-Cambridge - Hackathon (Cambridge, 30-31st Jan 2016)
-Hack Cambridge hackathon - App called 'Clear Pass', consisting of several parts.
+# 'Hack-Cambridge' - Hackathon (Cambridge, 30-31st Jan 2016)
+We built a security service called 'Clear Pass'. It consists of several parts:
 
-There is a web server managing a database of users and their biometric data. It also provides a website explaining how to use/integrate the product.
+There is a web server managing a database of users and their biometric data.  
+It also provides a website explaining how to use/integrate the product. 
 
-Than there is a Android app which is used for scanning of fingerprints, measuring heartrate, etc. QR-code-based one-time passwords are generated in the mobile app. 
+Than there is a Android app which is used for scanning of fingerprints, measuring heartrate, etc.  
+QR-code-based one-time passwords are generated in the mobile app. 
 
 Client company with our integrated JS plugin provides a way for the user to scan the QR code (via a webcam) and then communicates with our server to get information about user's authentication. 
 
-All parts of this system are implemented and saved in corresponding folders.
+All parts of this system are implemented and saved in corresponding folders.  
+We used Google App Engine but they deleted the provided account after the hackathon.
 
 **Team:** [Dalimil Hajek](https://github.com/dalimil), [Miguel Jaques](https://github.com/seuqaj114), [Andre Melo](https://github.com/andrenmelo), [Nicholas Boucher](https://github.com/nickboucher32)
 
