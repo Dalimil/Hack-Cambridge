@@ -1,4 +1,4 @@
-# Hack-Cambridge - Hackathon (Cambridge, 30-31st Jan 2016)
+# Hack Cambridge - Hackathon (Cambridge, 30-31st Jan 2016)
 We built a security service called 'Clear Pass'. It consists of several parts:
 
 There is a web server managing a database of users and their biometric data.  
